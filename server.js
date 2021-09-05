@@ -10,7 +10,7 @@ const app = express();
 
 // Express has bodyParser
 app.use(cors({ origin: '*' }))
-app.use(express.json({ extended: false }))
+app.use(express.json());
 
 //DB Config
 const dbURI = process.env.MONGO_URI || config.get('mongoURI');
